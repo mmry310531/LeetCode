@@ -10,17 +10,8 @@ public:
     int findKthLargest(vector<int>& nums, int k) {
         int left=INT_MIN/2; int right=INT_MAX/2;
         
-        /// Debug
-        int c = 0;
-        ///
         
         while(left<right){
-            
-            /// Debug
-            cout << "left: " << left << endl;
-            cout << "right: " << right << endl;
-            c++;
-            ///    
         
             // choose middle point as pivot
             int mid = right - (right-left)/2;
@@ -34,9 +25,7 @@ public:
                 right = mid-1;
             }
         }
-        /// Debug
-        cout << c << endl;
-        /// 
+
         return left;
     }
     
